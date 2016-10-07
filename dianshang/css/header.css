@@ -1,0 +1,151 @@
+.topBar{
+	background-color: #f7f7f7;
+	width:100%;
+	height:30px;
+}
+.leftArea{
+	float:left;
+}
+.rightArea{
+	float:right;
+	font-size:14px;
+	font-family:"宋体";
+	line-height: 29px;
+}
+.topBar .comWidth a {
+	color:black;
+}
+.leftArea a span{
+ 	color:#f8b600;
+}
+.leftArea a{
+	font-size:14px;
+	font-weight:bold;
+	font-family:serif;
+}
+
+.logoBar{
+	width:100%;
+	height:85px;
+	background-color:#1d7ad9;
+}
+.logoBar .logo{
+	height:85px;
+	float:left;
+}
+.logoBar .search,.shopCar{
+	float:left;
+	height:35px;
+	margin-top:23px;
+	
+}
+.search{
+	margin-left:147px;
+	
+}
+
+.shopCar{
+	margin-left: 30px;
+	
+	background-color:#ff8c00;
+}
+.shopCar a{
+	color:white;
+	font-size:14px;
+	display:inline-block;
+	}
+.shopCar #sh_car span{
+	display: block;
+	float: right;
+	line-height: 33px;
+	margin-right: 5px;
+	
+}
+.shopCar #sh_car{
+	border-right:1px solid #e27a00;
+}
+.shopCar #number{
+	background-image:url(../img/shopcar.png);
+	background-position:33px -22px; 
+	background-repeat: no-repeat;
+	width:57px;
+	
+}
+
+.shopCar #number span{
+	display:block;
+	float:left;
+	margin-left:20px;
+	line-height: 28px;
+}
+.shopCar #sh_car{
+	background-image: url(../img/shopcar.png); 
+	background-repeat:no-repeat;
+	background-position:12px 5px;
+	width:88px;
+	height:30px;
+}
+.logoBar #text_search{
+	width:360px;
+	height:35px;
+	margin-right:0;
+	border:none;
+}
+#btn_search{
+	width:69px;
+	height:35px;
+	border:none;
+	margin-left: -5px;
+	font-size:15px;
+	font-family:sans-serif;
+	color:white;
+	background-color: #ff8c00;
+	cursor:pointer;
+}
+/*导航*/
+
+.bc_nav{
+	width:100%;
+	height:33px;
+	background-color:#1369c0;
+}
+.nav_title{
+	width: 191px;
+	float:left;
+
+}
+.nav_title a{
+	display:inline-block;
+	float:right;
+	margin-right: 11px;
+	color:white;
+	font-size:18px;
+	font-weight: bold;
+	font-family: "微软雅黑";
+}
+.nav_title span{
+	display: block;
+	float:right;
+	height:15px;
+	margin-top:12px;
+	margin-right: 29px;
+	width:15px;
+	line-height: 15px;
+	background-image: url(../img/shopcar.png);
+	background-position:0px -50px;
+	background-repeat: no-repeat;
+}
+.navBar li{
+	display: block;
+	float:left;
+	width:100px;
+	text-align:center;
+	font-size:14px;
+	line-height: 33px;
+}
+.navBar li a{
+	color:white;
+}
+.navBar li:first-child{
+	background-color: #4593fd;
+}

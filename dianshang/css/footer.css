@@ -1,0 +1,36 @@
+.clearfix:before,.clearfix:after{
+   		content:"";
+   		display:table;
+	}
+	.clearfix:after{clear:both;}
+	.clearfix{
+   		 *zoom:1;/*IE/7/6*/
+   		 clear:both;
+	}
+footer{
+	width:100%;
+	height:223px;
+	background-color:#d4d4d4;
+	margin-top:42px;
+}	
+footer div{
+	text-align:center;
+}
+footer .lianxi{
+	margin-top:56px;
+}
+footer .lianxi a{
+	color:black;
+}
+footer .banquan{
+	margin-top: 14px;
+}
+footer .banquan span{
+	margin-right: 20px;
+}
+footer .foot_icon{
+	margin-top: 36px;
+}
+footer .foot_icon img{
+	margin-right:25px;
+}

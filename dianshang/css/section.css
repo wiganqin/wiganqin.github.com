@@ -1,0 +1,184 @@
+/*导航列表*/
+.navList{
+	width:189px;
+	height:65px;
+	color:white;
+	background-color:#4593fd;
+	border-top:1px solid #5aa1fe;
+	border-bottom:1px solid #3487f2;
+}
+.nav_left{
+	float:left;
+	width:170px;
+	/*background-color: */
+}
+.navDetail{
+	display:none;
+	width:575px;
+	height:382px;
+	position:absolute;
+	margin-left:189px;
+	z-index: 999;
+	background-color:white;
+	border:1px solid gray;
+}
+.detail{
+	
+	width:527px;
+	height:30px;
+	border-bottom:1px solid gray;
+	margin-left:27px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.deleft{
+	display:block;
+	float:left;
+	width:61px;
+}
+.deleft a{
+	color:#4b88da;
+	font-size:14px;
+	font-weight:bold;
+	margin-right:19px;
+}
+.deright{
+	display:block;
+	float:left;
+	width:447px;
+}
+.deright a{
+	color:black;
+	font-size: 13px;
+	margin-left:14px;
+}
+.change{
+	background-color:white;
+	border-left: 1px solid #4593fd;
+	color:black;
+}
+
+.navList dl dt a{
+	color:inherit;
+	font-size: 14px;
+	font-weight:bold;
+	margin:2px;
+}
+.navList dl dt a span{
+	display: inline-block;
+	border-radius:12px;
+	background-color:#106ac0;
+	padding:1px 7px;
+}
+
+.navList dl dd a{
+	color:inherit;
+	font-size:12px;
+	margin:5px;
+}
+.arrow1{
+	width:8px;
+	height:15px;
+	float:right;
+	margin-top:21px;
+	margin-right:4px;
+	background-image:url(../img/shopcar.png);
+	background-position:0px -66px;
+}
+.navList dl{
+	display: block;
+	float:left;
+	margin-top: 15px;
+	margin-left:3px;
+}
+
+/*轮播*/
+.lunbo{
+	float:right;
+	width:811px;
+	height:335px;
+}
+.lunbo img{
+	position:absolute;
+	width:811px;
+	height:335px;
+	display:none;
+}
+#img1{
+	/*z-index:100;*/
+}
+
+/*商品列表*/
+.clearfix:before,.clearfix:after{
+   		content:"";
+   		display:table;
+	}
+	.clearfix:after{clear:both;}
+	.clearfix{
+   		 *zoom:1;/*IE/7/6*/
+   		 clear:both;
+	}
+.product{
+	width:100%;
+	height:460;
+	border-bottom:8px solid #ff7201;
+	margin-bottom: 10px;
+
+
+}
+.product_title i{
+	display:block;
+	float:left;
+	width:45px;
+	height:45px;
+	background-image: url(../img/shopcar.png);
+	background-repeat:no-repeat;
+	background-position: 1px -83px;
+}
+.product_title h1{
+	display:block;
+	padding:11px;
+	font-size: 23px;
+	float:left;
+}
+.product_title a{
+	display:block;
+	float:right;
+	font-size:14px;
+	padding-top:25px;
+}
+.product_content{
+	clear:both;
+	border-top:1px solid gray;
+	border-bottom:1px solid #EEF509; 
+}
+.product_list{
+	float:left;
+	width:196px;
+	border:1px solid gray;
+}
+.list_top{
+	height:280px;
+	text-align: center;
+	border-bottom:1px solid gray;
+}
+.list_top span{
+	color:#ff7300;
+}
+.list_top img{
+	margin-top:35px;
+	margin-bottom: 20px;
+}
+
+.list_bottom {
+	width:170px;
+	height:110px;
+	text-align: center;
+	padding-top: 20px;
+}
+.list_bottom img{
+	width:46px;
+	height:75px;
+	float:left;
+	margin-left: 10px;
+}
