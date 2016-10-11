@@ -146,6 +146,6 @@
 .navBar li a{
 	color:white;
 }
-.navBar li:first-child{
+.navBar li:first-child,.navBar li:hover{
 	background-color: #4593fd;
 }

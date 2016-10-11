@@ -102,10 +102,11 @@
 	position:absolute;
 	width:811px;
 	height:335px;
-	display:none;
+	
 }
-#img1{
-	/*z-index:100;*/
+
+ #img2,#img3{
+	display:none;
 }
 
 /*商品列表*/

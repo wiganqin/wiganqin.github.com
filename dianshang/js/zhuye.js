@@ -1,10 +1,10 @@
-// 轮播
+// 简易幻灯片
 $(function(){
 	var imgs = $(".lunbo img");
     var a=0;
 	function count1(){
 		$(imgs[a]).fadeOut(2000);
-		// $(imgs[a]).css("z-index","");
+		
 		switch(a){
 			case 0:
 			a=1;
@@ -16,11 +16,11 @@ $(function(){
 			a=0;
 			break;
 		}
-		// $(imgs[a]).css("z-index","100");
-		$(imgs[a]).fadeIn(2000);
+		
+		$(imgs[a]).fadeIn(3000);
 	}
    setInterval(count1,3000);
-
+//导航
 	var nav=$(".navList")[0];
 	var detail=$(".navDetail")[0];
     navlist(nav,detail);
