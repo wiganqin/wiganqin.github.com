@@ -31,9 +31,19 @@
 	</style>
 	<script type="text/javascript">
 		$(function(){
-			$(".panel-body").click(function(){
-				// console.log($(this).children("a")[0]);	
-				window.open($(this).children("a")[0],"_blank");
+			
+			$("a").click(function(){
+					//点击a链接，外层div点击事件返回false,防止弹出两窗口
+					$(".panel-body").click(function(){
+						return false;
+					})					
+				});
+						
+			$(".panel-body").click(function(event){
+				var a=$(this).children("a")[0];
+				
+				window.open(a,"_blank");
+				
 			});
 		});
 	</script>
