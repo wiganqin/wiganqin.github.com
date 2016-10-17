@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="kewords" content="照明，豪迈照明">
+    <meta name="description" content="这个页面是豪迈照明练习，PSD来源优设网，经修改，采用bootstrap尝试">
+    <title>豪迈照明练习</title>
+
+    <!-- Bootstrap -->
+    <link href="../bootstrap.css" rel="stylesheet">
+	<script src="../jquery-3.1.0.min.js"></script>    
+    <script src="../bootstrap.min.js"></script>
+    
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    	.carousel .item img{
+    		width:100%;
+    	}
+    	/*.carousel{
+    		margin-top:-20px;
+    	}*/
+    	.navbar-form span{
+    		margin-left: 10px;
+    	}
+    	.serch01{
+    		background-color:#f7f6f2;
+    	}
+    	.col-md-4 img{
+    		width:100%;
+    		
+    	}
+		.col-md-4 h4 a{
+			color:#9c7553;
+			padding-bottom: 5px;
+			border-bottom:1px dotted gray;
+		}
+		
+		.navbar-header .navbar-brand{
+			font-size:30px;
+		}
+		footer{
+			padding-top:10px;
+			background-color:#9c7652;
+
+		}
+		.footer .row{
+			padding-bottom:10px;
+		}
+		.footer .row a{
+			color:inherit;
+		}
+		.footer .row img{
+			margin-right: 5px;
+		}
+		#midpic{
+			width:100%;
+			margin-top: 10px;
+		}
+		.con-sec{
+			margin-top: 20px;
+		}
+		.con-sec .tabtest{
+			font-size:22px; 
+			
+		}
+		#title-test{
+			color:#c9b799;
+			font-size:30px;
+		}
+    </style>
+  </head>
+  <body>
+  	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	    
+	    <div class="navbar-header">
+	       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+          </button>
+	       <a class="navbar-brand" href="#">豪迈照明</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav" >
+	        <li class="active"><a href="#">豪迈首页</a></li>
+	        <li><a href="#">LED吸顶灯</a></li>
+	        <li><a href="#">产品中心</a></li>
+	        <li><a href="#">家居照明解决方案</a></li>
+	        <li><a href="#">招商加盟</a></li>
+	        <li><a href="#">OEM</a></li>
+	        <li><a href="#">关于豪迈</a></li>
+	        <li><a href="#">联系豪迈</a></li>
+	        
+	      </ul>
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#">注册/登录</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown">其他 <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#">经销商入口</a></li>
+	            <li><a href="#">意见问答</a></li>
+	            <li><a href="#">网站地图</a></li>
+	            
+	          </ul>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	
+	<div id="carousel-example-generic" class="carousel slide .container-fluid" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	  </ol>
+
+	  <div class="carousel-inner" role="listbox">
+	    <div class="item active">
+	      <img src="img/lunbo1.jpg" alt="豪迈照明">
+	      <div class="carousel-caption">
+	        第一张图卧室卧室卧室
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="img/lunbo2.jpg" alt="豪迈照明">
+	      <div class="carousel-caption">
+	        第二张图第二张图卧室
+	      </div>
+	    </div>
+	    <div class="item">
+	      <img src="img/lunbo3.jpg" alt="豪迈照明">
+	      <div class="carousel-caption">
+	        第三张图
+	      </div>
+	    </div>
+	  </div>
+
+	</div>
+
+<div class="container">
+	<div class="search01 row">
+		<form class="navbar-form navbar-left" role="search" method="">
+	    <div class="form-group">
+	        <input type="text" class="form-control" placeholder="请输入关键词">
+	    </div>
+	    <button type="submit" class="btn btn-default">搜索</button>
+	    <span>大家都在搜：</span><span><a href="#">吸顶灯</a></span><span><a href="#">家居照明</a></span>
+	    <span><a href="">LED生产厂家</a></span>
+
+	   </form>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-3 col-md-offset-4">
+			<img  src="img/home.jpg">
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<img src="img/content01.jpg">
+			<h4 class="text-center"><a href="">豪迈客厅照明应用</a></h4>
+			<p class="text-center">别有洞天，雅趣无穷的会客空间</p>
+		</div>
+		<div class="col-md-4">
+			<img src="img/content02.jpg">
+			<h4 class="text-center"><a href="">豪迈卧室照明应用</a></h4>
+			<p class="text-center">柔和、宁静，给你一个更好的睡眠</p>
+		</div>
+		<div class="col-md-4">
+			<img src="img/content03.jpg">
+			<h4 class="text-center"><a href="">豪迈书房照明应用</a></h4>
+			<p class="text-center">健康照明，更好保障您的视力</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<img src="img/content04.jpg">
+			<h4 class="text-center"><a href="">豪迈餐厅照明应用</a></h4>
+			<p class="text-center">让灯光成为食欲的一部分</p>
+		</div>
+		<div class="col-md-4">
+			<img src="img/content05.jpg">
+			<h4 class="text-center"><a href="">豪迈厨房照明应用</a></h4>
+			<p class="text-center">明亮舒适，老婆从此爱上厨房</p>
+		</div>
+		<div class="col-md-4">
+			<img src="img/content06.jpg">
+			<h4 class="text-center"><a href="">豪迈走廊照明应用</a></h4>
+			<p class="text-center">曲径通幽，完美链接五大空间</p>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<img src="img/fivepro.jpg" id="midpic" alt="">
+</div>
+<div class="container con-sec">
+	
+	<div class="row">
+		<div class="col-md-8 col-md-offset-3 tabtest">
+		  <ul class="nav nav-tabs" role="tablist">
+			  <li role="presentation" class="active"><a href="#">功能型LED吸顶灯</a></li>
+			  <li role="presentation" class="disabled"><a href="#">预约型LED吸顶灯</a></li>
+			  <li role="presentation" class="disabled"><a href="#">其他LED吸顶灯</a></li>
+		  </ul>
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<img src="img/xideng01.jpg">
+			<h4 class="text-center"><a href="">功能性吸灯</a></h4>
+			
+		</div>
+		<div class="col-md-4">
+			<img src="img/xideng02.jpg">
+			<h4 class="text-center"><a href="">功能性吸灯</a></h4>
+			
+		</div>
+		<div class="col-md-4">
+			<img src="img/xideng03.jpg">
+			<h4 class="text-center"><a href="">功能性吸灯</a></h4>
+			
+		</div>
+	</div>
+	<h3 class="text-center" id="title-test">TESTIMONIALS</h3>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="panel panel-info">
+				<div class="panel-heading ">OEM客户见证</div>
+				<div class="panel-body">
+					<div class="col-md-4"><img src="img/witness.jpg"></div>
+					<div class="col-md-8">
+
+					<h4>豪迈照明品质值得信赖</h4>
+					<span>豪迈照明是大品牌，他们的产品通过CQC质量管理体系认证以及CE认证，产品符合ISO9001：2000质量</span>
+					</div>
+					
+					
+				</div>
+				<div class="panel-footer text-right"><a href="">+更多</a></div>
+			</div>
+			
+		</div>
+		<div class="col-md-6">
+			<div class="panel panel-info">
+				<div class="panel-heading ">消费者眼中的豪迈</div>
+				<div class="panel-body">
+					<div class="col-md-4"><img src="img/witness.jpg"></div>
+					<div class="col-md-8">
+
+					<h4>消费者眼中的豪迈</h4>
+					<span>豪迈照明是大品牌，他们的产品通过CQC质量管理体系认证以及CE认证，产品符合ISO9001：2000质量</span>
+					</div>
+					
+					
+				</div>
+				<div class="panel-footer text-right"><a href="">+更多</a></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr class="half-rule">
+<footer class="footer">
+  <div class="container">
+    	<div class="row text-center">
+    		<a href="#">豪迈简介|</a>
+			<a href="#">豪迈公告|</a>
+			<a href="#">招贤纳士|</a>
+			<a href="#">联系我们|</a>
+			<span>客服热线：400-675-1234</span>
+    	</div> 
+		
+		<div class="row text-center">
+			<span>Copyright&copy;2006&nbsp;-&nbsp;2016&nbsp;慕课版权所有</span>
+			&nbsp;&nbsp;&nbsp;
+			<span>京ICP备09037834号</span>
+			&nbsp;&nbsp;
+			<span>京ICP证B1034-8373号</span>
+			&nbsp;&nbsp;
+			<span>某市公安局XX分局备案编号：123456789123</span>
+		</div>
+		<div class="row text-center">
+			<img src="img/f_logo.gif" alt="">
+			<img src="img/f_logo.gif" alt="">
+			<img src="img/f_logo.gif" alt="">
+		</div>
+
+    
+  </div>
+</footer>    
+  </body>
+</html>
