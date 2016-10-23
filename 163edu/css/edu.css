@@ -295,6 +295,8 @@ input:-moz-placeholder {
   height: 460px;
 }
 
+
+
 .Slideshow-item {
   position: absolute;
   z-index: -9999;
@@ -304,10 +306,9 @@ input:-moz-placeholder {
 .Slideshow-images img {
   opacity: 0;
   width: 100%;
+  height: 460px;
   transition: opacity .5s ease-in-out;
 }
-
-
 
 .Slideshow-indicators {
   position: absolute;
@@ -316,7 +317,7 @@ input:-moz-placeholder {
   bottom: 20px;
   width: 84px;
   height: 14px;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .Slideshow-indicators li{
@@ -331,6 +332,9 @@ input:-moz-placeholder {
 .Slideshow-indicators li.active {
   background-color: #000;
 }
+
+
+
 
 /** End Slideshow Area **/
 
@@ -525,7 +529,7 @@ input:-moz-placeholder {
 }
 .coursefloat-title h5{
 	font-size:19px;
-	font-style:bold;
+	font-weight:bold;
 	color:black;
 }
 
@@ -680,7 +684,9 @@ input:-moz-placeholder {
 .page-nav-area {
   position: absolute;
   bottom: -64px;
-  right: 10px;
+  /*right: 200px;*/
+ left:50%;
+ transform: translateX(-50%);
 }
 
 .page-nav-btn { margin: 0 40px;}

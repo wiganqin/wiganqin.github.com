@@ -7,11 +7,9 @@
     var SlideshowImageAutoFit = function(){
         var SlideshowImage = document.querySelector('.Slideshow-item img');
         var SlideshowImageWrapper = document.querySelector('.Slideshow-area');
-        var rightHeight = window.getComputedStyle(SlideshowImage,null).getPropertyValue('height');
-        SlideshowImageWrapper.style.height = rightHeight;
+        // var rightHeight = window.getComputedStyle(SlideshowImage,null).getPropertyValue('height');
+        // SlideshowImageWrapper.style.height = rightHeight;
     };
-
-	//首先调用轮播图自适应函数
     SlideshowImageAutoFit();
 
     //在浏览器窗口大小变化时调用轮播图自适应函数
@@ -271,15 +269,52 @@
     var getCourseLists = function(pageNo,psize,type,startPageIndex,currentPageIndex){
 
         var ajaxOnsuccess = function(xhr){
-            var courseLists = [];
+            var courseLists;
             var lenOfCourseItems;
             var size_of_page_items;
             var len_of_coursePages; //课程列表总页数
 
 
             var course_display_area = document.querySelector('.course-display-area ul');
-            courseLists = JSON.parse(xhr.responseText);
-            lenOfCourseItems = 20;
+            
+            // courseLists = JSON.parse(xhr.responseText);
+            
+            //github https,网易接口http,浏览器阻止载入混合内容，故重新赋值为展示。
+            courseLists = {
+             totalCount:50, 
+             list:[{
+                    id:250006,
+                    bigPhotoUrl:"http://img0.ph.126.net/ftDZ6dX0KhGAgzYgFvco7A==/6597692090238895296.jpg",
+                    name:"Windows Phone 7 带来了什么?　",
+                    provider:"极客公园",
+                    description:"本期极客活动将邀请国内在 Windows Phone 7 平台有重要表现的嘉宾们，他们将于我们共同探讨 WP 7 手机的到来带来了什么样的革新和体验，并一起来看看他们又做了哪些创新。",
+                    price:0,
+                    learnerCount:467,
+                    middlePhotoUrl:"http://img2.ph.126.net/1Md8406dmo1TPHnYD67fdw==/6598260537750239978.jpg",
+                    categoryNames:null,
+                    },{
+                    id:250006,
+                    bigPhotoUrl:"http://img0.ph.126.net/ftDZ6dX0KhGAgzYgFvco7A==/6597692090238895296.jpg",
+                    name:"Windows Phone 7 带来了什么?　",
+                    provider:"极客公园",
+                    description:"本期极客活动将邀请国内在 Windows Phone 7 平台有重要表现的嘉宾们，他们将于我们共同探讨 WP 7 手机的到来带来了什么样的革新和体验，并一起来看看他们又做了哪些创新。",
+                    price:0,
+                    learnerCount:467,
+                    middlePhotoUrl:"http://img2.ph.126.net/1Md8406dmo1TPHnYD67fdw==/6598260537750239978.jpg",
+                    categoryNames:null,
+                    }],
+              pagination:{
+                    pageIndex : 1, 
+                    pageSize: 10,
+                    totlePageCount: 3
+              }, 
+              totalPage: 3
+               };
+            lenOfCourseItems = 2;
+         
+
+            
+            // lenOfCourseItems = 20;
             var i;
             var segment = '';
             for(i=0; i<lenOfCourseItems; i++){
@@ -299,6 +334,11 @@
               + '<p class="course-price">¥ ' + courseLists.list[i]['price'] +'</p></li>';
 
             }
+            
+            //github https,网易接口http,浏览器阻止载入混合内容，故重新赋值为展示。
+            segment=segment+segment+segment+segment+segment+segment+segment+segment+segment;
+            
+
             //插入动态生成的课程卡片节点
             course_display_area.innerHTML = segment;
             //从获取的数据中得到总页数
@@ -564,8 +604,24 @@
             var lenOfRankingItems;
             var hot_ranking_area = document.querySelector('.hot-ranking-list');
 
-            hotRankingLists = JSON.parse(xhr.responseText);
-            lenOfRankingItems = 10;
+            // hotRankingLists = JSON.parse(xhr.responseText);
+
+             
+            //github https,网易接口http,浏览器阻止载入混合内容，故重新赋值为展示。
+            hotRankingLists=[
+            {smallPhotoUrl:"http://img0.ph.126.net/i3GGvnHeqpUlFKMEbwQCAA==/6631754960466767499.jpg",
+             name:"艺术二维码设计-零基础到入门",
+             learnerCount:248},
+             {smallPhotoUrl:"http://img0.ph.126.net/i3GGvnHeqpUlFKMEbwQCAA==/6631754960466767499.jpg",
+             name:"艺术二维码设计-零基础到入门",
+             learnerCount:248}
+             ];
+            lenOfRankingItems = 2;
+           
+
+
+            // lenOfRankingItems = 10;
+           
             var i;
             var segment = '';
             for(i=lenOfRankingItems-1; i>=0; i--){
@@ -574,6 +630,9 @@
               + '<h4>' + hotRankingLists[i]['name'] + '</h4>'
               + '<div class="enroll-people-num-area"><span class="enroll-people-num">' + hotRankingLists[i]['learnerCount'] + '</span></div></li>';
             }
+            //github https,网易接口http,浏览器阻止载入混合内容，故重新赋值为展示。
+            segment = segment+segment+segment+segment+segment;
+
             hot_ranking_area.innerHTML = segment;
         };
 

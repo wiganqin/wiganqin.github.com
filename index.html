@@ -12,7 +12,7 @@
     }
 </script>
 <script type="text/javascript" src="jquery/bootstrap.min.js"></script>
-	<style> 
+	<style type="text/css"> 
 		.info{
 			width:100%;
 			text-align:center;
@@ -31,20 +31,27 @@
 	</style>
 	<script type="text/javascript">
 		$(function(){
-			
-			$("a").click(function(){
-					//点击a链接，外层div点击事件返回false,防止弹出两窗口
-					$(".panel-body").click(function(){
-						return false;
-					})					
-				});
-						
 			$(".panel-body").click(function(event){
-				var a=$(this).children("a")[0];
 				
-				window.open(a,"_blank");
+				window.open($(this).children("a")[0],"_blank");
 				
 			});
+
+			$("a").click(function(e){
+				//点击a链接，外层div点击事件返回false,防止弹出两窗口,或停止事件在DOM层次中的传播。
+					
+				// $(".panel-body").click(function(){
+				// 	return false;
+				// });	
+				if(e.stopPropagation){
+							e.stopPropagation();
+						}else{
+							e.cancelBubble = true;
+						}
+								
+				});
+						
+			
 		});
 	</script>
 </head>
@@ -61,13 +68,6 @@
 			</div>
 			</div>
 		</div>
-		<div class="col-lg-3">
-			<div class="panel panel-default">
-			<div class="panel-body">
-				<a href="./dianshang/index.html" target="_blank">电商首页模仿练习(jquery)</a>
-			</div>
-			</div>
-		</div>
 
 		<div class="col-lg-3">
 			<div class="panel panel-success">
@@ -80,7 +80,15 @@
 		<div class="col-lg-3">
 			<div class="panel panel-default">
 			<div class="panel-body">
-				<a href="./jquery/ListManager/ListManager.html" target="_blank">数据删除图片预览(jquery)</a>
+				<a href="./dianshang/index.html" target="_blank">电商首页模仿练习(jquery)</a>
+			</div>
+			</div>
+		</div>
+
+		<div class="col-lg-3">
+			<div class="panel panel-default">
+			<div class="panel-body">
+				<a href="./littleex/jspubu/index.html" target="_blank">js瀑布流</a>
 			</div>
 			</div>
 		</div>
@@ -89,6 +97,13 @@
 
     <div class="row">
 
+		<div class="col-lg-3">
+			<div class="panel panel-default">
+			<div class="panel-body">
+				<a href="./jquery/ListManager/ListManager.html" target="_blank">数据删除图片预览(jquery)</a>
+			</div>
+			</div>
+		</div>
 		<div class="col-lg-3">
 			<div class="panel panel-default">
 			<div class="panel-body">
