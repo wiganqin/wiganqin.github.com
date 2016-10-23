@@ -456,7 +456,8 @@
             },
             onsuccess: ajaxOnsuccess
         };
-        ajax(url,options);
+        // ajax(url,options);
+        ajaxOnsuccess();
     };
 
 	
@@ -518,7 +519,7 @@
             var options = {
                 onsuccess: ajaxOnsuccess
             };
-            ajax(url,options);
+            // ajax(url,options);
 
         };
         follow_btn.onclick = function(){
@@ -640,7 +641,9 @@
         var options = {
             onsuccess: ajaxOnsuccess
         };
-        ajax(url, options);
+       
+        // ajax(url, options);
+        ajaxOnsuccess();
 
     })();
 
