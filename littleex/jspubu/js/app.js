@@ -1,7 +1,7 @@
 window.onload=function(){
 	imgLocation("container","box");	
 	//模拟实现加载的数据。
-	var imgData = {"data":[{"src":"02.jpg"},{"src":"01.jpg"},{"src":"05.jpg"},{"src":"13.jpg"},{"src":"11.jpg"},{"src":"12.jpg"}]}
+	var imgData = {"data":[{"src":"02.jpg"},{"src":"001.jpg"},{"src":"05.jpg"},{"src":"13.jpg"},{"src":"11.jpg"},{"src":"15.jpg"}]}
 	//监听滚动条
 	window.onscroll = function(){
 		if(checkFlag()){
