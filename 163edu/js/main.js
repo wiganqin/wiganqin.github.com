@@ -1,20 +1,5 @@
    
-    /* 
-      *轮播图高宽自适应，动态获取自适应后的高度，
-      *用这个高度渲染轮播图的容器，否则高度不匹配会影响下面的相邻元素 
-    */
-
-    var SlideshowImageAutoFit = function(){
-        var SlideshowImage = document.querySelector('.Slideshow-item img');
-        var SlideshowImageWrapper = document.querySelector('.Slideshow-area');
-        // var rightHeight = window.getComputedStyle(SlideshowImage,null).getPropertyValue('height');
-        // SlideshowImageWrapper.style.height = rightHeight;
-    };
-    SlideshowImageAutoFit();
-
-    //在浏览器窗口大小变化时调用轮播图自适应函数
-    window.addEventListener('resize',SlideshowImageAutoFit,false);
-
+        
 	/*
       轮播图模块
     */
@@ -138,9 +123,9 @@
 
     // 新添加一个Cookie
     var addCookieItem = function(name,value,expire){ // expire的单位为天
-        var today = new Date();
-        today.setDate(today.getDate() + expire);
-        document.cookie = name + "=" + value + "; expires=" + today.toGMTString();
+        var deadline = new Date();
+        deadline.setDate(deadline.getDate() + expire);
+        document.cookie = name + "=" + value + "; expires=" + deadline.toGMTString();
     };
     //通过Cookie的名获取相应的值
     var getCookieItem = function(name){
@@ -687,7 +672,8 @@
                     getCourseLists(currentPageIndex+2,20,current_type,startPageIndex);
                 }
                 else if(currentPageIndex == pageItems.length-1){//如果当前页位于最后一个分页索引
-                    var boundryValue = 16; //本来这里应该是等于 totalPage - totalPage%size,然而这里并不能获取到taotalPage的值，只有在回调Ajax那里才能取到，暂时想到的办法是第一次载入时就把这个值存进一个cookie里，但据说不太好，所以我这里先写常量好了
+                    var boundryValue = 16; 
+                    //本来这里应该是等于 totalPage - totalPage%size,然而这里并不能获取到taotalPage的值，这里暂写常量
                     //这里是为了防止当末页是16页，点击下一页后会载入17-25页的情况，因为总页数只有18页
                     if(lastPageIndex == boundryValue){
                        getCourseLists(boundryValue+1,20,current_type,11,6); 

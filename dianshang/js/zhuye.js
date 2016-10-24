@@ -21,41 +21,55 @@ $(function(){
 	}
    setInterval(count1,3000);
 //导航
-	var nav=$(".navList")[0];
-	var detail=$(".navDetail")[0];
+/*	
+	var nav=$(".navList")[0],
+	    detail=$(".navDetail")[0];
     navlist(nav,detail);
-    var nav1=$(".navList")[1];
-	var detail1=$(".navDetail")[1];
+    var nav1=$(".navList")[1],
+	   detail1=$(".navDetail")[1];
     navlist(nav1,detail1);
-    var nav2=$(".navList")[2];
-	var detail2=$(".navDetail")[2];
+    var nav2=$(".navList")[2],
+	    detail2=$(".navDetail")[2];
     navlist(nav2,detail2);
-    var nav3=$(".navList")[3];
-	var detail3=$(".navDetail")[3];
+    var nav3=$(".navList")[3],
+	    detail3=$(".navDetail")[3];
     navlist(nav3,detail3);
-    var nav4=$(".navList")[4];
-	var detail4=$(".navDetail")[4];
+    var nav4=$(".navList")[4],
+	    detail4=$(".navDetail")[4];
     navlist(nav4,detail4);
 	function navlist(nav,detail){
 		var nav=$(nav);
 		var detail=$(detail);
 		nav.hover(function(){
-	  	detail.show();
-	  	nav.addClass("change");
-	  	detail.hover(function(){
 	  		detail.show();
-	  	    nav.addClass("change");
-	  	},function(){
-	  		detail.hide();
-	  		nav.removeClass("change");
-	  	});
-	  },function(){
+	  		nav.addClass("change");
+	  		detail.hover(function(){
+	  				detail.show();
+	  	    		nav.addClass("change");
+	  			},function(){
+	  				detail.hide();
+	  				nav.removeClass("change");
+	  			});
+	 	 },function(){
 	  		detail.hide();
 	  		nav.removeClass("change");
 	  });
 	}
-  
-   
+  */
 
+$(".navList").each(function(i,v){
+	var detail = $($(".navDetail")[i]);
+	var v=$(v);
+	var add = function(){
+		detail.show();
+		v.addClass("change");
+	};
+	var rev = function(){
+		detail.hide();
+		v.removeClass("change");
+	};
+	v.hover(add,rev);
+	detail.hover(add,rev);
+});
 
 });
