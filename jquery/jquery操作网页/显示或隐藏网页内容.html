@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>显示或隐藏网页</title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<script type="text/javascript" >
+		if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='../jquery-3.3.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+	</script>
+	<style type="text/css">
+		/*#id-div-fade{
+			border:solid 1px #666;
+			background-color: red;
+			width:600px;
+			height:300px;
+			
+		}*/
+	</style>
+	
+</head>
+<body>
+	<h2 class="h2-caption">jquery实现页面淡出淡入操作</h2>
+	<h3 class="h3-text">fadeIn与fadeOut函数</h3>
+	<button id="id-button-fadeout">页面淡出效果</button>
+	<button id="id-button-fadein">页面淡入效果</button>
+	<div id="id-div-fade">
+		<p>这里是js控制的两个数值：</p>
+		<p>1 第一个为淡入时间</p>
+		<p>2 第二个为淡出时间</p>
+	</div>
+	
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#id-button-fadeout").click(function(){
+				$("#id-div-fade").fadeOut(600);
+			});
+			$("#id-button-fadein").click(function(){
+				$("#id-div-fade").fadeIn("fast");
+			});
+
+		});
+		
+	</script>
+</body>
+</html>

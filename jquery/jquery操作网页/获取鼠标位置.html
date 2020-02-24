@@ -1,0 +1,67 @@
+!<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>获取鼠标位置</title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<script type="text/javascript" >
+		if (typeof jQuery == 'undefined') {
+        document.write(unescape("%3Cscript src='../jquery-3.3.1.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+	</script>
+	<script type="text/javascript">
+		$(document).ready(
+				function(){
+					$(document).mousemove(
+							function(e){
+								getScreenCoordinates(e);
+								getScreenCoordinates1(e);
+								getScreenCoordinates2(e);
+
+							}
+						);
+				}
+			);
+		function getScreenCoordinates(e){
+			x=e.screenX;
+			y=e.screenY;
+			$("#pingmu").text("X:"+x+",Y:"+y);
+		}
+		function getScreenCoordinates1(e){
+			x=e.clientX;
+			y=e.clientY;
+			$("#chuangkou").text("X:"+x+",Y:"+y);
+		}
+		function getScreenCoordinates2(e){
+			x=e.pageX;
+			y=e.pageY;
+			$("#page").text("X:"+x+",Y:"+y);
+		}
+	</script>
+
+</head>
+<body>
+	我是一名程序员，也是一名父亲。坦率的说，我很绝望。<br>
+	孩子几乎每天做作业都要到11点，周末还要上各种辅导班，几乎全部的时间都用来学习，没有任何自由。<br>
+	有一天周末，黄昏。孩子做完作业，趴在窗户上，怔怔的望着楼下，突然问我：“爸爸，你说人活着有什么意思？”听这么小的孩子说出这样的话，我不由的心头一酸，感觉到有眼泪在打转。<br>
+	为了安慰孩子，我说：“你今天好好学习，是为了将来考上好大学，毕业找个好工作。到时候，你有了钱，又有了时间。想去哪玩，就去哪玩！”<br>
+	其实我知道，我在撒谎。<br>
+	真相是，将来孩子即使考上了好大学，有了好工作。<br>
+	大概率也是忙碌终日，不得半日偷闲。<br>
+	哪怕是表面上拥有的不错收入，却需要用健康和生活来交换。<br>
+	正如昨天我读到的一条朋友圈：<br>
+
+作者：沈世钧<br>
+链接：https://www.zhihu.com/question/319623962/answer/686382997<br>
+
+来源：知乎<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>
+
+<br><br><br><br><br><br><br><br><br>
+	<p>获取鼠标在当前屏幕中的坐标:<span id="pingmu"></span></p>
+	<p>获取鼠标在当前窗口客户区域中的坐标:<span id="chuangkou"></span></p>
+	<p>获取鼠标在当前窗口页面中的坐标:<span id="page"></span></p>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
